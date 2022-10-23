@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import * as React from 'react';
 // material-ui
-import { Grid, Card, Box, CardActions, CardContent, Typography, Button } from '@mui/material';
+import { Grid, Card, Box, CardActions, CardContent, Typography, Button, CardMedia } from '@mui/material';
 
 // project imports
 import EarningCard from './EarningCard';
@@ -31,6 +31,7 @@ const Dashboard = () => {
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                     Word of the Day
                 </Typography>
+                <CardMedia component="img" height="194" image="../../../assets/images/player.png" alt="Paella dish" />
                 <Typography variant="h5" component="div">
                     be{bull}nev{bull}o{bull}lent
                 </Typography>
@@ -53,16 +54,6 @@ const Dashboard = () => {
         <Grid container spacing={gridSpacing}>
             <Grid item xs={4}>
                 <Card variant="outlined">{card}</Card>
-            </Grid>
-            <Grid item xs={12}>
-                <Grid container spacing={gridSpacing}>
-                    <Grid item xs={12} md={8}>
-                        <TotalGrowthBarChart isLoading={isLoading} />
-                    </Grid>
-                    <Grid item xs={12} md={4}>
-                        <PopularCard isLoading={isLoading} />
-                    </Grid>
-                </Grid>
             </Grid>
         </Grid>
     );
