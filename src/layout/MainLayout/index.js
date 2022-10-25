@@ -94,13 +94,11 @@ const MainLayout = () => {
                     transition: leftDrawerOpened ? theme.transitions.create('width') : 'none'
                 }}
             >
-                <Toolbar>
-                    <Header handleLeftDrawerToggle={handleLeftDrawerToggle} />
-                </Toolbar>
+                <h1>Technical Test:players app </h1>
             </AppBar>
 
             {/* drawer */}
-            <Sidebar drawerOpen={leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
+            {/* <Sidebar drawerOpen={leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} /> */}
 
             {/* main content */}
             <Main theme={theme} open={leftDrawerOpened}>
